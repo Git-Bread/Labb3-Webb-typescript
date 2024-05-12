@@ -1,12 +1,14 @@
-$border: solid 1px black;
-$textSize: 1.2em;
-$smallHeader: 1.5em;
-$textColor1: white;
-$background1: #98c1d9;
-$background2: #e0fbfc;
-$background3: #293241;
-$underlineColor: #ffb625;
-$linkHover: darken($textColor1, 50%);
+:root {
+    --border: solid 1px black;
+    --textSize: 1.2em;
+    --smallHeader: 1.5em;
+    --textColor1: white;
+    --background1: #98c1d9;
+    --background2: #e0fbfc;
+    --background3: #293241;
+    --underlineColor: #ffb625;
+    --linkHover: darken(--textColor1, 50%);
+}
 
 * {
     font-family:Arial, Helvetica, sans-serif;
@@ -24,76 +26,9 @@ body {
         padding-top: 7em;
     }
     margin: 0;
-    background-color: $background1;
+    background-color: var(--background1);
     display: flex;
     flex-direction: column;
-    header {
-        position: fixed;
-        height: 5em;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        select {
-            display: none;
-        }
-        @media screen and (max-width: 880px) {
-            flex-direction: column;
-            height: 6em;
-            h1 {
-                margin-bottom: 0;
-                margin-top: 0.3em;
-            }
-            nav * {
-                margin: 0;
-            }
-            nav ul {
-                padding: 0;
-                margin-left: 0.5em;
-            }
-        }
-        @media screen and (max-width: 460px) {
-            ul {
-                display: none !important;
-            }
-            select {
-                display: inline-block;
-                margin-bottom: 1em;
-                margin-left: 1em;
-                font-size: $textSize;
-                text-decoration: underline;
-                background-color: $background2;
-                option:current {
-                    background-color: red;
-                }
-            }  
-        }
-        h1 {
-            color: $textColor1;
-            white-space: nowrap;
-            margin-left: 0.5em;
-        }
-        ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            margin-right: 1em;
-            li {
-                margin: 0.5em;
-                white-space: nowrap;
-                a {
-                    color: $textColor1;
-                    
-                }
-                a:hover {
-                    color: darken($textColor1, 50%);
-                }
-            }
-        }
-        .current {
-            text-decoration-color: $underlineColor;
-        }
-        background-color: $background3;
-    }
     section {
         display: grid;
         margin: auto;
@@ -107,8 +42,8 @@ body {
         column-gap: 2em;
         article {
             margin: 1em;
-            background-color: $background2;
-            border: $border;
+            background-color: var(--background2);
+            border: var(--border);
             border-radius: 25px;
             padding: 1em;
             display: grid;
@@ -153,7 +88,7 @@ body {
                             span {
                                 font-weight: bold;
                             }
-                            font-size: $textSize;
+                            font-size: var(--textSize);
                             margin-bottom: 0.5em;
                         }
                     }
@@ -168,33 +103,33 @@ body {
             }
             div {
                 h1 {
-                    font-size: $smallHeader;
+                    font-size: var(--smallHeader);
                 }
                 p {
-                    font-size: $textSize;
+                    font-size: var(--textSize);
                 }
             }
         }
     }
     #foot{
-        background-color: $background3;
+        background-color: var(--background3);
         position: absolute;
         bottom: 0;
         width: 100%;
         height: 10em;  
         h2 {
-            color: $textColor1;
+            color: var(--textColor1);
             margin-left: 1em;
         }
         h5 {
-            color: $textColor1;
+            color: var(--textColor);
             font-size: 2em;
             margin-top: 1em;
             text-align: end;
             margin: 1em;
         }
-        a {
-            color: $textColor1;
+        a, h5{
+            color: var(--textColor1);
         }
     }
 }

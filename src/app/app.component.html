@@ -1,19 +1,5 @@
 <div id="wrapper">
-  <header>
-      <h1>River Mammal Society</h1>
-      <nav>
-          <ul>
-              <li><a href="/" class="current"><h2>Homepage</h2></a></li>
-              <li><a href="convert"><h2>Conversion Page</h2></a></li>
-              <li><a href="gallery"><h2>Gallery</h2></a></li>
-          </ul>
-          <select title="Home" onchange="location.href=this.value"> 
-              <option value="/" class="current">Home</option> 
-              <option value="gallery">Gallery</option> 
-              <option value="convert">Converter</option> 
-            </select> 
-      </nav>
-  </header>
+  <app-menu></app-menu>
   <router-outlet />
   <footer id="foot">
     <h2 id="userLogin"></h2>
