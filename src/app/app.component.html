@@ -3,16 +3,20 @@
       <h1>River Mammal Society</h1>
       <nav>
           <ul>
-              <li><a href="index.html" class="current"><h2>Homepage</h2></a></li>
-              <li><a href="convert.html"><h2>Conversion Page</h2></a></li>
-              <li><a href="gallery.html"><h2>Gallery</h2></a></li>
+              <li><a href="/" class="current"><h2>Homepage</h2></a></li>
+              <li><a href="convert"><h2>Conversion Page</h2></a></li>
+              <li><a href="gallery"><h2>Gallery</h2></a></li>
           </ul>
           <select title="Home" onchange="location.href=this.value"> 
-              <option value="index.html" class="current">Home</option> 
-              <option value="gallery.html">Gallery</option> 
-              <option value="convert.html">Converter</option> 
+              <option value="/" class="current">Home</option> 
+              <option value="gallery">Gallery</option> 
+              <option value="convert">Converter</option> 
             </select> 
       </nav>
   </header>
   <router-outlet />
+  <footer id="foot">
+    <h2 id="userLogin"></h2>
+    <h5>Images provided by <a href="https://www.pexels.com/">Pexels</a></h5>
+  </footer>
   </div>
