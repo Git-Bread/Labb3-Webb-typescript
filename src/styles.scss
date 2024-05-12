@@ -1,1 +1,200 @@
-/* You can add global styles to this file, and also import other style files */
+$border: solid 1px black;
+$textSize: 1.2em;
+$smallHeader: 1.5em;
+$textColor1: white;
+$background1: #98c1d9;
+$background2: #e0fbfc;
+$background3: #293241;
+$underlineColor: #ffb625;
+$linkHover: darken($textColor1, 50%);
+
+* {
+    font-family:Arial, Helvetica, sans-serif;
+}
+p {
+    max-width: 65ch;
+}
+body {
+    #wrapper {
+        position: relative;
+        min-height: 100vh;
+    }
+    #contentWrap {
+        padding-bottom: 12em; 
+        padding-top: 7em;
+    }
+    margin: 0;
+    background-color: $background1;
+    display: flex;
+    flex-direction: column;
+    header {
+        position: fixed;
+        height: 5em;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        select {
+            display: none;
+        }
+        @media screen and (max-width: 880px) {
+            flex-direction: column;
+            height: 6em;
+            h1 {
+                margin-bottom: 0;
+                margin-top: 0.3em;
+            }
+            nav * {
+                margin: 0;
+            }
+            nav ul {
+                padding: 0;
+                margin-left: 0.5em;
+            }
+        }
+        @media screen and (max-width: 460px) {
+            ul {
+                display: none !important;
+            }
+            select {
+                display: inline-block;
+                margin-bottom: 1em;
+                margin-left: 1em;
+                font-size: $textSize;
+                text-decoration: underline;
+                background-color: $background2;
+                option:current {
+                    background-color: red;
+                }
+            }  
+        }
+        h1 {
+            color: $textColor1;
+            white-space: nowrap;
+            margin-left: 0.5em;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            margin-right: 1em;
+            li {
+                margin: 0.5em;
+                white-space: nowrap;
+                a {
+                    color: $textColor1;
+                    
+                }
+                a:hover {
+                    color: darken($textColor1, 50%);
+                }
+            }
+        }
+        .current {
+            text-decoration-color: $underlineColor;
+        }
+        background-color: $background3;
+    }
+    section {
+        display: grid;
+        margin: auto;
+        width: clamp(200px, 100%, 2000px);
+        max-width: 90%;
+        grid-template-columns: 1fr;
+        @media screen and (min-width: 1500px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        row-gap: 2em;
+        column-gap: 2em;
+        article {
+            margin: 1em;
+            background-color: $background2;
+            border: $border;
+            border-radius: 25px;
+            padding: 1em;
+            display: grid;
+            column-gap: 1.5em;
+            grid-template-columns: 1fr;
+            @media screen and (min-width: 1500px) {
+                grid-template-columns: 1fr 1fr;
+            }
+            @media screen and (max-width: 1500px) {
+                max-width: 67ch;
+                margin: auto;
+            }
+            h3 {
+                font-size: 2em;
+                margin: 0.4em;
+                margin-left: 0em;
+            }
+            row-gap: 0;
+            picture {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                grid-column: 1;
+                grid-row: 1;
+                img {
+                    width: clamp(150px, 100%, 800px);
+                    border-radius: 25px;
+                }
+            }
+            .bigdiv {
+                @media screen and (max-width: 1500px) {
+                    grid-row: 3;
+                }
+                div {
+                    @media screen and (min-width: 1500px) {
+                        grid-column: 2;
+                        grid-row: 1/3;
+                    }
+                    ul {
+                        padding-left: 1em;
+                        li {
+                            span {
+                                font-weight: bold;
+                            }
+                            font-size: $textSize;
+                            margin-bottom: 0.5em;
+                        }
+                    }
+                    blockquote {
+                        font-style: italic;
+                    }
+                }
+            }
+            .smallText {
+                grid-column: 1;
+                grid-row: 2;
+            }
+            div {
+                h1 {
+                    font-size: $smallHeader;
+                }
+                p {
+                    font-size: $textSize;
+                }
+            }
+        }
+    }
+    #foot{
+        background-color: $background3;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 10em;  
+        h2 {
+            color: $textColor1;
+            margin-left: 1em;
+        }
+        h5 {
+            color: $textColor1;
+            font-size: 2em;
+            margin-top: 1em;
+            text-align: end;
+            margin: 1em;
+        }
+        a {
+            color: $textColor1;
+        }
+    }
+}
