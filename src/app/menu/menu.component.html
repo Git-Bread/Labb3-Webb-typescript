@@ -2,12 +2,13 @@
     <h1>River Mammal Society</h1>
     <nav>
         <ul>
-            <li><a href="/" class="current"><h2>Homepage</h2></a></li>
-            <li><a href="convert"><h2>Conversion Page</h2></a></li>
-            <li><a href="gallery"><h2>Gallery</h2></a></li>
+            <li><a [routerLink]="['/']" [routerLinkActive]="['current']" [routerLinkActiveOptions]="{exact: true}"><h2>Homepage</h2></a></li>
+            <li><a [routerLink]="['convert']" [routerLinkActive]="['current']"><h2>Conversion Page</h2></a></li>
+            <li><a [routerLink]="['gallery']" [routerLinkActive]="['current']"><h2>Gallery</h2></a></li>
         </ul>
         <select title="Home" onchange="location.href=this.value"> 
-            <option value="/" class="current">Home</option> 
+            <option value="#">Navigate</option> 
+            <option value="/">Home</option> 
             <option value="gallery">Gallery</option> 
             <option value="convert">Converter</option> 
           </select> 
