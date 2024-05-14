@@ -30,7 +30,6 @@ body {
     display: flex;
     flex-direction: column;
     section {
-        padding-top: 8em;
         display: grid;
         margin: auto;
         width: clamp(200px, 100%, 2000px);
