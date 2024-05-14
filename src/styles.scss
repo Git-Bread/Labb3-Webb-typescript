@@ -23,13 +23,13 @@ body {
     }
     #contentWrap {
         padding-bottom: 12em; 
-        padding-top: 7em;
     }
     margin: 0;
     background-color: var(--background1);
     display: flex;
     flex-direction: column;
     section {
+        padding-top: 8em;
         display: grid;
         margin: auto;
         width: clamp(200px, 100%, 2000px);
