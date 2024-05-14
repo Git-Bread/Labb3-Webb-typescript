@@ -1,5 +1,7 @@
 # Labb3Webb
+Labboration 3 Typescript, löstes med hjälp utav Angular efter uppgifts beskrivningen och ChatGPT för "fillertext". Alla nödvändiga filer medöljer. För utväcklingsprocess se "about" sidan.
 
+# Angular Stuff
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
 
 ## Development server
