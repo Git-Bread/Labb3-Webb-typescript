@@ -25,6 +25,9 @@ background-color: var(--background3);
         }
     }
     @media screen and (max-width: 460px) {
+        h1 {
+            font-size: 1.7em;
+        }
         nav {
             ul {
                 display: none !important;

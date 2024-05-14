@@ -1,0 +1,16 @@
+<section>
+    <h2>Convert Temprature</h2>
+    <form [formGroup]="temp">
+        <div>
+            <label>Celsius:</label>
+            <input formControlName="Celsius" value={{temp.value.Celsius}} (input)="updateFahr()" type="number">
+            <!--<span *ngIf="temp.controls['Celsius'].invalid && temp.controls['Celsius'].touched"></span>-->
+        </div>
+            <p class="arrows">&#8596;</p>
+        <div>
+            <label>Fahrenheit:</label>
+            <input formControlName="Fahrenheit" value={{temp.value.Fahrenheit}} (input)="updateCels()" type="number">
+            <!--<span *ngIf="temp.controls['Fahrenheit'].invalid && temp.controls['Fahrenheit'].touched"></span>-->
+        </div>
+    </form>
+</section>

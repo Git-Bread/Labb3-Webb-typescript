@@ -1,0 +1,16 @@
+<section>
+    <h2>Convert Lenght</h2>
+    <form [formGroup]="lenght">
+        <div>
+            <label>Meters:</label>
+            <input formControlName="Meters" value={{lenght.value.Meters}} (input)="updateFeet()" type="number">
+            <!--<span *ngIf="lenght.controls['Meters'].invalid && lenght.controls['Meters'].touched"></span>-->
+        </div>
+            <p class="arrows">&#8596;</p>
+        <div>
+            <label>Feet:</label>
+            <input formControlName="Feet" value={{lenght.value.Feet}} (input)="updateMeter()" type="number">
+            <!--<span *ngIf="lenght.controls['Feet'].invalid && lenght.controls['Feet'].touched"></span>-->
+        </div>
+    </form>
+</section>

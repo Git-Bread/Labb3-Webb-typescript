@@ -1,0 +1,10 @@
+app-lenght-convert, app-temprature-convert {
+    max-width: 100%;
+}
+section {
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width: 1500px) {
+        flex-direction: column;
+    }
+}

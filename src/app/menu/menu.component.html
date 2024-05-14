@@ -4,12 +4,12 @@
         <ul>
             <li><a [routerLink]="['/']" [routerLinkActive]="['current']" [routerLinkActiveOptions]="{exact: true}"><h2>Homepage</h2></a></li>
             <li><a [routerLink]="['convert']" [routerLinkActive]="['current']"><h2>Conversion Page</h2></a></li>
-            <li><a [routerLink]="['gallery']" [routerLinkActive]="['current']"><h2>Gallery</h2></a></li>
+            <li><a [routerLink]="['about']" [routerLinkActive]="['current']"><h2>About</h2></a></li>
         </ul>
         <select title="Home" onchange="location.href=this.value"> 
             <option value="#">Navigate</option> 
             <option value="/">Home</option> 
-            <option value="gallery">Gallery</option> 
+            <option value="about">Gallery</option> 
             <option value="convert">Converter</option> 
           </select> 
     </nav>
